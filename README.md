@@ -1,2 +1,6 @@
 # Amazon-Ratings-Prediction
 Used logistic regression to perform anaysis to predict the ratings using user reviews.
+
+•	After trying various methodologies, I understood that I wanted to focus on the model's efficiency.
+•	After doing some research to compare the TFIDF and Count Vectorizer, I understood that TFIDF would be more appropriate for this competition because of its diversity, where it focuses beyond the number of words. It concentrates largely on the weight of words in the given dataset and normalizes it. This means it identifies the words that can affect the model's output (here: bad, amazing, best, etc.) instead of nouns and generic words.
+•	One of my other aspects of interest was the max_features() and max_iterations() values. It was tricky to crack this as the dataset was relatively large when compared to my previous experiences. I had to try various combinations of values to understand the convergence point of the iterations. For example, I set both values to 10000 to get the desired output (0.86156), and when I increased these values, there were no big changes in the output. This meant that the maximum unique terms were identified and were trained accordingly. Doing anything above this would have decreased the performance of the model.
